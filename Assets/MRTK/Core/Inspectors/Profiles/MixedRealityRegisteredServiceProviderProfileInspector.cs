@@ -87,6 +87,11 @@ namespace Microsoft.MixedReality.Toolkit.Editor
                     return;
                 }
 
+                if (configFoldouts.Length == 0)
+                {
+                    configFoldouts = new bool[configurations.arraySize];
+                }
+
                 using (new EditorGUILayout.HorizontalScope())
                 {
                     EditorGUILayout.LabelField("Configurations", EditorStyles.boldLabel, GUILayout.ExpandWidth(true));
